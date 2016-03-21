@@ -1,0 +1,59 @@
+<ion-view title="Posting a Job">
+    <ion-content>
+        <form ng-submit="postJob()">
+            <div class="list">
+                <label class="item item-input">
+                    <span class="input-label">Title</span>
+                    <input type="text" ng-model="postingJob.title">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Category</span>
+                    <input type="text" ng-model="postingJob.category">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Salary</span>
+                    <input type="text" ng-model="postingJob.salary">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Starting Date</span>
+                    <input type="text" ng-model="postingJob.startingDate">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Deadline</span>
+                    <input type="text" ng-model="postingJob.deadline">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Description</span>
+                    <input type="text" ng-model="postingJob.description">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Email</span>
+                    <input type="text" ng-model="postingJob.contact.email">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Phone</span>
+                    <input type="text" ng-model="postingJob.contact.phone">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Skype</span>
+                    <input type="text" ng-model="postingJob.contact.Skype">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Country</span>
+                    <input type="text" ng-model="postingJob.address.country">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Region</span>
+                    <input type="text" ng-model="postingJob.address.region">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">City</span>
+                    <input type="text" ng-model="postingJob.address.city">
+                </label>
+                <label class="item">
+                    <button class="button button-block button-positive" type="submit">Post Job</button>
+                </label>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

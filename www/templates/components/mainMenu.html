@@ -1,0 +1,33 @@
+<ion-content class="stable-bg main-menu" ng-controller="MainCtrl">
+    <ion-list ng-if="islogin()" >
+
+        <div >
+            <ion-item class="no-border item-stable item-icon-left"
+                      ng-repeat="item in profileMenu"
+                      ui-sref="{{ item.state }}"
+                      menu-close>
+
+                <i class="icon {{ item.icon }}"></i>
+                {{ item.title }}
+            </ion-item>
+        </div>
+
+        <div class="no-border item item-divider item-stable"></div>
+    </ion-list>
+    <ion-list>
+
+        <ion-item ng-repeat="item in mainMenu" class="no-border item-stable item-icon-left" ui-sref="{{ item.state }}" menu-close>
+            <i class="icon {{ item.icon }}"></i>
+            {{ item.title }}
+            <span class="badge badge-assertive" ng-if="item.badge">{{ item.badge }}</span>
+        </ion-item>
+    </ion-list>
+</ion-content>
+<ion-footer-bar class="bar-stable no-border no-background-image" ng-controller="MainCtrl">
+    <div class="button-bar">
+        <button class="button button-positive" ng-click="logout()" ng-if="islogin()">Logout</button>
+        <button class="button button-positive" ng-click="login()" ng-if="!islogin()">
+            Login
+        </button>
+    </div>
+</ion-footer-bar>

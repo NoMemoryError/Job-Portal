@@ -1,0 +1,158 @@
+/* Empty. Add your own CSS if you like */
+.no-padding {
+    padding: 0 !important;
+}
+
+.no-border {
+    border: none !important;
+}
+
+.no-border > .tabs {
+    border-top-width: 0 !important;
+}
+
+.no-background-image {
+    background-image: none !important;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-grid img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.item-avatar smart-img {
+    border-radius: 50% !important;
+}
+
+.main-menu h3 {
+    margin: 0 0 15px;
+}
+
+.my-item {
+    left: 0;
+    right: 0;
+}
+
+.bookmarked {
+    color: #185b81;
+}
+
+/**
+ * Directives
+ */
+smart-img,youtube-img,smart-video {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+}
+
+smart-img:only-child,youtube-img:only-child,smart-video:only-child {
+    display: block;
+}
+
+smart-img > div,youtube-img > div,smart-video > div {
+    width: 100%;
+    padding-bottom: 100%;
+    box-sizing: content-box;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+smart-img.contain > div,youtube-img.contain > div,smart-video.contain > div {
+    background-size: contain;
+}
+
+smart-img.ratio-4x3 > div,youtube-img.ratio-4x3 > div,smart-video.ratio-4x3 > div {
+    padding-bottom: 75%;
+}
+
+smart-img.ratio-2x1 > div,youtube-img.ratio-2x1 > div,smart-video.ratio-2x1 > div {
+    padding-bottom: 50%;
+}
+
+smart-img.fullscreen,youtube-img.fullscreen,smart-video.fullscreen {
+    height: 100%;
+    background-color: #000;
+}
+
+smart-img.fullscreen > div,youtube-img.fullscreen > div,smart-video.fullscreen > div {
+    padding: 0;
+    height: 100%;
+    background-size: contain;
+}
+
+smart-img.blur-bottom,youtube-img.blur-bottom,smart-video.blur-bottom {
+    position: relative;
+}
+
+smart-img.blur-bottom:before,youtube-img.blur-bottom:before,smart-video.blur-bottom:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 95%,
+        rgba(255, 255, 255, 1) 100%
+    );
+}
+
+.youtube-wrapper {
+    height: 100%;
+    background-color: #000;
+}
+
+.youtube-wrapper > iframe {
+    position : absolute;
+    top : 50%;
+    -webkit-transform: translate3d(0,-50%,0);
+}
+
+youtube-img > div {
+    position: relative;
+}
+
+youtube-img i, .youtube-placeholder i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate3d(-50%,-50%,0);
+    color: white;
+    font-size: 40px;
+    text-shadow: 0 1px 5px black;
+}
+
+.youtube-placeholder i {
+    font-size: 80px;
+}
+
+text-overlay {
+    display: block;
+    background-color: #000;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    padding: 10px;
+    opacity: 0.8;
+}

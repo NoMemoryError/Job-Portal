@@ -1,0 +1,47 @@
+<ion-header-bar class="bar-stable no-border no-background-image">
+    <h1 class="title">I am looking for</h1>
+</ion-header-bar>
+<ion-content>
+    <div class="list">
+        <label class="item item-input item-select">
+            <div class="input-label">
+                Category
+            </div>
+            <select ng-model="criteria.category" ng-options="v.value as v.title for v in searchCriteriaOpts.category">
+            </select>
+        </label>
+        <label class="item item-input item-select">
+            <div class="input-label">
+                Title
+            </div>
+            <input ng-model="criteria.title" type="text">
+        </label>
+        <label class="item item-input item-select">
+            <div class="input-label">
+                Country
+            </div>
+            <select ng-model="criteria.country" ng-options="v.value as v.title for v in searchCriteriaOpts.country" >
+            </select>
+        </label>
+        <label class="item item-input item-select">
+            <div class="input-label">
+                Region
+            </div>
+            <select ng-model="criteria.region" ng-options="v.value as v.title for v in searchCriteriaOpts.region">
+            </select>
+        </label>
+        <label class="item item-input item-select">
+            <div class="input-label">
+                City
+            </div>
+            <select ng-model="criteria.city" ng-options="v.value as v.title for v in searchCriteriaOpts.city">
+            </select>
+        </label>
+    </div>
+
+</ion-content>
+<ion-footer-bar>
+    <div class="button-bar">
+        <button class="button button-positive" ng-click="search()"> Find</button>
+    </div>
+</ion-footer-bar>

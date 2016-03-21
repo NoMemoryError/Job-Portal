@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <script src="lib/underscore-min.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/routes/jobs.js"></script>
+    <script src="js/routes/bookmarks.js"></script>
+    <script src="js/controllers/job.js"></script>
+    <script src="js/controllers/main.js"></script>
+    <script src="js/controllers/search.js"></script>
+    <script src="js/directives/emptyResultSet.js"></script>
+    <script src="js/directives/jobListItem.js"></script>
+    <script src="js/directives/smartImg.js"></script>
+    <script src="js/directives/bookmarkButton.js"></script>
+    <script src="js/directives/shareActionSheet.js"></script>
+    <script src="js/services/searchCriteria.js"></script>
+    <script src="js/services/bookmarkStorage.js"></script>
+    <script src="js/services/auth.js"></script>
+    <script src="js/services/platformSharing.js"></script>
+    <script src="js/services/platformDetection.js"></script>
+    <script src="js/controllers.js"></script>
+
+  </head>
+
+  <body ng-app="starter">
+  <ion-side-menus enable-menu-with-back-views="true">
+      <!-- Center content -->
+      <ion-side-menu-content drag-content="false">
+          <ion-nav-bar class="bar-positive">
+              <ion-nav-buttons side="left">
+                  <button class="button button-clear icon ion-navicon" menu-toggle="left"></button>
+              </ion-nav-buttons>
+              <ion-nav-buttons side="right">
+                  <button class="button button-clear icon ion-ios7-search-strong" menu-toggle="right"></button>
+              </ion-nav-buttons>
+          </ion-nav-bar>
+          <div swipe-history>
+              <ion-nav-view animation="slide-left-right"></ion-nav-view>
+          </div>
+      </ion-side-menu-content>
+
+      <!-- Left menu -->
+      <ion-side-menu side="left">
+          <ng-include src="'templates/components/mainMenu.html'"></ng-include>
+      </ion-side-menu>
+
+      <!-- Right menu -->
+      <ion-side-menu side="right">
+          <ng-include src="'templates/components/searchForm.html'" ng-controller="SearchCtrl"></ng-include>
+      </ion-side-menu>
+  </ion-side-menus>
+  </body>
+</html>

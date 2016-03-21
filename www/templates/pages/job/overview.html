@@ -1,0 +1,65 @@
+<ion-view title="Overview">
+    <ion-content class="has-tabs">
+        <ion-refresher
+                refreshing-icon="ion-loading-c"
+                pulling-text="Pull to refresh..."
+                on-refresh="refresh()">
+        </ion-refresher>
+
+        <smart-img class="ratio-4x3 blur-bottom" src="{{ job.poster }}"></smart-img>
+
+        <h3 class="positive text-center">{{ job.title }}</h3>
+        <h4 class="dark text-center">{{ job.category }}</h4>
+
+
+
+        <div class="list card">
+            <div class="item item-icon-left">
+                <i class="icon ion-cash"></i>
+
+                Salary: {{ job.salary }}
+            </div>
+            <div class="item item-icon-left">
+                <i class="icon ion-ios7-time-outline"></i>
+
+                Starts: {{ job.startingDate }}
+            </div>
+            <div class="item item-icon-left">
+                <i class="icon ion-ios7-time"></i>
+
+                Deadline: {{ job.deadline }}
+            </div>
+            <div class="item item-text-wrap">
+                {{ job.description }}
+            </div>
+        </div>
+
+        <div class="list card">
+            <div class="item item-icon-left">
+                <i class="icon ion-email"></i>
+                Email: {{ job.contact.email }}
+            </div>
+            <div class="item item-icon-left">
+                <i class="icon ion-android-call"></i>
+                Contact Number: {{ job.contact.phone }}
+            </div>
+            <div class="item item-icon-left">
+                <i class="icon ion-social-skype"></i>
+                Skype: {{ job.contact.skype }}
+            </div>
+        </div>
+    </ion-content>
+    <div class="tabs tabs-icon-top">
+        <a class="tab-item" ng-click="apply()">
+            <i class="icon ion-checkmark-circled"></i>
+            Apply
+        </a>
+        <a class="tab-item" share-action-sheet='{{ job }}'>
+            <i class="icon ion-android-share"></i>
+            Share
+        </a>
+        <a class="tab-item">
+            <bookmark-button jobid='{{ job.id }}'></bookmark-button>
+        </a>
+    </div>
+</ion-view>

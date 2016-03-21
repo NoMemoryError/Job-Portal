@@ -1,0 +1,13 @@
+<ion-view title="{{title}}">
+    <ion-content>
+        <ion-list ng-if="jobs.length > 0">
+            <ion-item class="item-thumbnail-left"
+                      ng-repeat="job in jobs"
+                      ui-sref="overview({ _id: job.id })"
+                      job={{job}} job-action-sheet>
+                <job-list-item job="job"></job-list-item>
+            </ion-item>
+        </ion-list>
+        <empty-result-set ng-if="jobs.length == 0"></empty-result-set>
+    </ion-content>
+</ion-view>

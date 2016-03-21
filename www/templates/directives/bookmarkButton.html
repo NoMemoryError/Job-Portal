@@ -1,0 +1,8 @@
+<div ng-if="isBookmarked()" class="bookmarked">
+    <i class="icon ion-android-star" ng-click="removeBookmark()"></i>
+    Bookmark
+</div>
+<div ng-if="!isBookmarked()">
+    <i class="icon ion-android-star" ng-click="addBookmark()"></i>
+    Bookmark
+</div>

@@ -1,0 +1,12 @@
+<smart-img class="item-image" src="{{ job.poster }}"></smart-img>
+
+<h2>{{ job.title }}</h2>
+<p ng-if="job.category">{{ job.category }}</p>
+<p ng-if="competition.prizes[0] || competition.rank">
+    <span ng-if="competition.prizes[0].value">
+        <i class="icon ion-trophy"></i> {{ competition.prizes[0].value }}
+    </span>
+    <span ng-if="competition.rank">
+        <i class="icon ion-podium"></i> {{ competition.rank }}
+    </span>
+</p>
